@@ -2,6 +2,9 @@ package main
 
 import (
 	"github.com/miaokobot/miaospeed/utils"
+
+	"net/http"
+	_ "net/http/pprof"
 )
 
 var COMPILATIONTIME string
@@ -14,6 +17,10 @@ func main() {
 	utils.BUILDCOUNT = BUILDCOUNT
 	utils.COMMIT = COMMIT
 	utils.BRAND = BRAND
+
+	go func() {
+		http.ListenAndServe("localhost:8081", nil)
+	}()
 
 	RunCli()
 }
