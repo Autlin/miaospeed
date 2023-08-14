@@ -69,6 +69,45 @@ func (tms *MultiStacks) Repr() string {
 	return strings.Join(repr, ",")
 }
 
+func (tms *MultiStacks) FirstV2(tag string) *GeoInfo {
+	if tms == nil || tms.Count() == 0 {
+		return nil
+	}
+
+	// check tags
+	if tag == "" {
+		tag = "46"
+	}
+	if len(tag) > 2 {
+		return nil
+	} else if len(tag) == 2 && tag[0] == tag[1] {
+		return nil
+	} else {
+		for _, r := range tag {
+			if r != '4' && r != '6' {
+				return nil
+			}
+		}
+	}
+
+	// get ordered by the sequence order of tags
+	stacks := []*GeoInfo{}
+	for _, r := range tag {
+		if r == '4' && len(tms.IPv4Stack) > 0 {
+			stacks = append(stacks, tms.IPv4Stack...)
+		} else if r == '6' && len(tms.IPv6Stack) > 0 {
+			stacks = append(stacks, tms.IPv6Stack...)
+		}
+	}
+
+	for _, ip := range stacks {
+		if ip.IP != "" {
+			return ip
+		}
+	}
+	return nil
+}
+
 func (tms *MultiStacks) First(tag string) *GeoInfo {
 	if tms == nil || tms.Count() == 0 {
 		return nil
@@ -83,7 +122,7 @@ func (tms *MultiStacks) First(tag string) *GeoInfo {
 	}
 
 	if tag != "v4" {
-		for _, v6 := range tms.IPv4Stack {
+		for _, v6 := range tms.IPv6Stack {
 			if v6.IP != "" {
 				return v6
 			}

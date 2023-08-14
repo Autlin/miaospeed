@@ -6,6 +6,7 @@ import (
 )
 
 type SlaveRequestConfigs struct {
+	STUNURL           string `yaml:"stunURL,omitempty" cf:"name=🫙 STUN 地址"`
 	DownloadURL       string `yaml:"downloadURL,omitempty" cf:"name=📃 测速文件"`
 	DownloadDuration  int64  `yaml:"downloadDuration,omitempty" cf:"name=⏱️ 测速时长 (单位: 秒)"`
 	DownloadThreading uint   `yaml:"downloadThreading,omitempty" cf:"name=🧶 测速线程数"`
@@ -31,6 +32,7 @@ func (src *SlaveRequestConfigs) DescriptionText() string {
 
 func (src *SlaveRequestConfigs) Clone() *SlaveRequestConfigs {
 	return &SlaveRequestConfigs{
+		STUNURL:           src.STUNURL,
 		DownloadURL:       src.DownloadURL,
 		DownloadDuration:  src.DownloadDuration,
 		DownloadThreading: src.DownloadThreading,
@@ -48,6 +50,10 @@ func (src *SlaveRequestConfigs) Clone() *SlaveRequestConfigs {
 
 func (src *SlaveRequestConfigs) Merge(from *SlaveRequestConfigs) *SlaveRequestConfigs {
 	ret := src.Clone()
+	if from.STUNURL != "" {
+		ret.STUNURL = from.STUNURL
+	}
+
 	if from.DownloadURL != "" {
 		ret.DownloadURL = from.DownloadURL
 	}
@@ -88,6 +94,9 @@ func (cfg *SlaveRequestConfigs) Check() *SlaveRequestConfigs {
 		cfg = &SlaveRequestConfigs{}
 	}
 
+	if cfg.STUNURL == "" {
+		cfg.STUNURL = preconfigs.PROXY_DEFAULT_STUN_SERVER
+	}
 	if cfg.DownloadURL == "" {
 		cfg.DownloadURL = preconfigs.SPEED_DEFAULT_LARGE_FILE_DEFAULT
 	}
