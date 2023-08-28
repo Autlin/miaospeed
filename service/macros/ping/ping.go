@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/preconfigs"
-	"github.com/miaokobot/miaospeed/utils"
-	"github.com/miaokobot/miaospeed/utils/structs"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/preconfigs"
+	"github.com/Autlin/miaospeed/utils"
+	"github.com/Autlin/miaospeed/utils/structs"
 )
 
 func pingViaTrace(ctx context.Context, p interfaces.Vendor, url string) (uint16, uint16, error) {

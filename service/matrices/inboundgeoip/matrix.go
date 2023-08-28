@@ -1,8 +1,8 @@
 package inboundgeoip
 
 import (
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/service/macros/geo"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/service/macros/geo"
 )
 
 type InboundGeoIP struct {

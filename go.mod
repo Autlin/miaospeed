@@ -1,4 +1,4 @@
-module github.com/miaokobot/miaospeed
+module github.com/Autlin/miaospeed
 
 go 1.18
 

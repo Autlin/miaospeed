@@ -3,11 +3,11 @@ package geo
 import (
 	"time"
 
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/utils"
-	"github.com/miaokobot/miaospeed/utils/structs"
-	"github.com/miaokobot/miaospeed/utils/structs/memutils"
-	"github.com/miaokobot/miaospeed/utils/structs/obliviousmap"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/utils"
+	"github.com/Autlin/miaospeed/utils/structs"
+	"github.com/Autlin/miaospeed/utils/structs/memutils"
+	"github.com/Autlin/miaospeed/utils/structs/obliviousmap"
 )
 
 var GeoCache *obliviousmap.ObliviousMap[*interfaces.GeoInfo]

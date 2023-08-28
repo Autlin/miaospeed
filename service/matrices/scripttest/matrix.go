@@ -1,8 +1,8 @@
 package scripttest
 
 import (
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/service/macros/script"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/service/macros/script"
 )
 
 type ScriptTest struct {

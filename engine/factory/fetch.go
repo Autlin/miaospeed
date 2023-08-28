@@ -2,9 +2,9 @@ package factory
 
 import (
 	"github.com/dop251/goja"
-	"github.com/miaokobot/miaospeed/engine/helpers"
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/vendors"
+	"github.com/Autlin/miaospeed/engine/helpers"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/vendors"
 )
 
 func FetchFactory(vm *goja.Runtime, p interfaces.Vendor, network interfaces.RequestOptionsNetwork) func(call goja.FunctionCall) goja.Value {

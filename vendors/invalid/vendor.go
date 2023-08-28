@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/miaokobot/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/interfaces"
 )
 
 type Invalid struct {

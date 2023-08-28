@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/miaokobot/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/interfaces"
 )
 
 // aws-v4-signature-like signing method

@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/dop251/goja"
-	"github.com/miaokobot/miaospeed/engine"
-	"github.com/miaokobot/miaospeed/engine/helpers"
-	"github.com/miaokobot/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/engine"
+	"github.com/Autlin/miaospeed/engine/helpers"
+	"github.com/Autlin/miaospeed/interfaces"
 )
 
 func ExecScript(p interfaces.Vendor, script *interfaces.Script) interfaces.ScriptResult {

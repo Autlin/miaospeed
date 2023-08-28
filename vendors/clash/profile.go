@@ -3,8 +3,8 @@ package clash
 import (
 	"github.com/Dreamacro/clash/adapter"
 	"github.com/Dreamacro/clash/constant"
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/utils"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/utils"
 	"gopkg.in/yaml.v2"
 )
 

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/miaokobot/miaospeed/interfaces"
-	"github.com/miaokobot/miaospeed/utils/structs/memutils"
-	"github.com/miaokobot/miaospeed/utils/structs/obliviousmap"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/utils/structs/memutils"
+	"github.com/Autlin/miaospeed/utils/structs/obliviousmap"
 )
 
 var DnsCache *obliviousmap.ObliviousMap[*interfaces.IPStacks]

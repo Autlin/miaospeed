@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/miaokobot/miaospeed/utils"
+	"github.com/Autlin/miaospeed/utils"
 
 	"net/http"
 	_ "net/http/pprof"
