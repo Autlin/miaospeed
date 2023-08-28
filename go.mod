@@ -1,9 +1,9 @@
-module github.com/Autlin/miaospeed
+module github.com/miaokobot/miaospeed
 
 go 1.20
 
 require (
-	github.com/MetaCubeX/Clash.Meta v1.15.1
+	github.com/Dreamacro/clash v1.18.0
 	github.com/dop251/goja v0.0.0-20230812105242-81d76064690d
 	github.com/dop251/goja_nodejs v0.0.0-20230731184339-9ba67d720a81
 	github.com/gofrs/uuid v4.4.0+incompatible
@@ -101,5 +101,4 @@ require (
 	lukechampine.com/blake3 v1.2.1 // indirect
 )
 
-
-// replace github.com/Dreamacro/clash => github.com/MetaCubeX/Clash.Meta v1.11.4
+//replace github.com/Dreamacro/clash => github.com/MetaCubeX/Clash.Meta v1.15.1
