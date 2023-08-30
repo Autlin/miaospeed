@@ -3,11 +3,12 @@ temp.png
 
 # built artifacts
 miaoko
-miaospeed
+miaospeed*
 dist
 *.tgz
 *.dev.sh
 build.*.sh
+build.*.bat
 *.mmdb
 
 # configs
@@ -28,3 +29,7 @@ fonts
 # miscs
 .DS_Store
 ._.DS_Store
+
+# dev
+.idea
+.vscode

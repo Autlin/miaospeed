@@ -5,10 +5,18 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/Autlin/miaospeed/preconfigs"
+	"github.com/Autlin/miaospeed/utils"
+
 	"github.com/Autlin/miaospeed/interfaces"
 )
 
 func detectNATType(proxy interfaces.Vendor, url string) (nmt NATMapType, nft NATFilterType) {
+
+	DomainPreheating := utils.DomainPreheating(url)
+	if DomainPreheating == nil {
+		url = preconfigs.PROXY_DEFAULT_STUN_SERVER
+	}
 	addrStr := strings.TrimLeft(url, "udp://")
 
 	wg := sync.WaitGroup{}

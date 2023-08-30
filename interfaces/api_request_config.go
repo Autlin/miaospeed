@@ -90,6 +90,7 @@ func (src *SlaveRequestConfigs) Merge(from *SlaveRequestConfigs) *SlaveRequestCo
 }
 
 func (cfg *SlaveRequestConfigs) Check() *SlaveRequestConfigs {
+
 	if cfg == nil {
 		cfg = &SlaveRequestConfigs{}
 	}
