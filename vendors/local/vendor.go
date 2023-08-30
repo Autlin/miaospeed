@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/moshaoli688/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/interfaces"
 )
 
 type Local struct {

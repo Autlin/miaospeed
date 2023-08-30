@@ -11,8 +11,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/moshaoli688/miaospeed/interfaces"
-	"github.com/moshaoli688/miaospeed/utils/structs"
+	"github.com/Autlin/miaospeed/interfaces"
+	"github.com/Autlin/miaospeed/utils/structs"
 )
 
 // for all methods in commons
