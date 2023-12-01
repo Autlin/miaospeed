@@ -4,7 +4,6 @@ package clash
 
 import (
 	"github.com/Dreamacro/clash/constant"
-	"net/netip"
 	"net/url"
 	"strconv"
 )
@@ -26,15 +25,15 @@ func urlToMetadata(rawURL string, network constant.NetWork) (addr constant.Metad
 			return
 		}
 	}
-	portInt, err := strconv.Atoi(portStr)
+	port, err := strconv.ParseUint(portStr, 10, 16)
 	if err != nil {
 		return
 	}
 	addr = constant.Metadata{
 		NetWork: network,
 		Host:    u.Hostname(),
-		DstIP:   netip.Addr{},
-		DstPort: uint16(portInt),
+		//DstIP:   nil, //There is no other way to temporarily log out
+		DstPort: uint32(port),
 	}
 	return
 }
