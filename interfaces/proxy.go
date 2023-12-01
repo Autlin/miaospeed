@@ -15,7 +15,7 @@ const (
 
 	Vless    ProxyType = "Vless"
 	Hysteria ProxyType = "Hysteria"
-	Hysteria ProxyType = "Hysteria2"
+	Hysteria2 ProxyType = "Hysteria2"
 	Tuic     ProxyType = "Tuic"
 
 	ProxyInvalid ProxyType = "Invalid"
