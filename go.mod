@@ -1,6 +1,6 @@
 module github.com/Autlin/miaospeed
 
-go 1.21
+go 1.20
 
 require (
 	github.com/Dreamacro/clash v1.18.0
